@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8" />
+	<title>超然地图</title>
+	<!-- 引入vant样式 -->
+	<link rel="stylesheet" href="../../lib/vant/2-12/index.css" />
+	<!-- test -->
+	<link ref="stylesheet" href="../../components/uni-fab/UniFab.css"
+	<style>
+		#mapDiv {
+			width: 100%;
+			height: calc(100vh - 15px);
+			position: absolute;
+		}
+
+		#fabDiv {
+			float: right;
+			position: absolute;
+			top: 0;
+			right: 0;
+			z-index: 999999;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="app" style="position: relative;">
+		<div id="mapDiv"></div>
+		<div id="fabDiv">
+			<van-button @click="buttonClick()">按钮</van-button>
+		</div>
+		<uni-fab></uni-fab>
+	</div>
+</body>
+<!--引入VUE.JS-->
+<script src="../../lib/vue/2-6-14/vue.min.js"></script>
+<!--引入天地图JS-->
+<script src="../../lib/tmap/api.js"></script>
+<!--引入vant-->
+<script src="../../lib/vant/2-12/vant.min.js"></script>
+<!-- test -->
+<script src="../../components/uni-fab/UniFab.common.js"></script>
+<script src="../../components/uni-fab/UniFab.umd.js"></script>
+
+
+
+<script>
+	var app = new Vue({
+		el: '#app',
+		data: function() {
+			return {};
+		},
+		mounted: function() {
+			that = this;
+			this.initMap();
+		},
+		methods: {
+			initMap: function() {
+				map = new T.Map('mapDiv');
+				map.centerAndZoom(new T.LngLat(117.118, 36.65659), 18);
+			},
+			buttonClick() {
+				this.$toast('提示文案');
+			},
+		}
+	});
+	Vue.use(vant.Lazyload);
+	Vue.use(uniFab);
+</script>
+</html>

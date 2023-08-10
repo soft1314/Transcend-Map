@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>超然地图</title>
+		<style>
+			#mapDiv {
+				width: 100%;
+				height: calc(100vh - 15px);
+			}
+		</style>
+		<script type="text/javascript" src="http://api.tianditu.gov.cn/api?v=4.0&tk=81bf1620a6d719f1ed9bfd37c45fa64b">
+		</script>
+		<script>
+			window.msgFromUniapp = function(arg) {
+				var aaa = JSON.stringify(arg);
+			   console.log(aaa);
+			   alert(aaa);
+			}
+
+			var map;
+			var zoom = 16;
+
+			function onLoad() {
+				map = new T.Map('mapDiv');
+				map.centerAndZoom(new T.LngLat(117.118, 36.65659), zoom);
+
+					// addmapTypeControl();
+
+			}
+
+			function addmapTypeControl() {
+				//添加切换地图图层的组件
+				var ctrl = new T.Control.MapType([{
+						title: "地图", //地图控件上所要显示的图层名称
+						icon: "http://api.tianditu.gov.cn/v4.0/image/map/maptype/vector.png", //地图控件上所要显示的图层图标（默认图标大小80x80）
+						layer: TMAP_NORMAL_MAP, //地图类型对象，即MapType。
+					},
+					{
+						title: "卫星",
+						icon: "http://api.tianditu.gov.cn/v4.0/image/map/maptype/satellite.png",
+						layer: TMAP_SATELLITE_MAP,
+					},
+					{
+						title: "卫星混合",
+						http: "http://api.tianditu.gov.cn/v4.0/image/map/maptype/satellitepoi.png",
+						layer: TMAP_HYBRID_MAP,
+					},
+					{
+						title: "地形",
+						icon: " http://api.tianditu.gov.cn/v4.0/image/map/maptype/terrain.png",
+						layer: TMAP_TERRAIN_MAP,
+					},
+					{
+						title: "地形混合",
+						icon: " http://api.tianditu.gov.cn/v4.0/image/map/maptype/terrainpoi.png",
+						layer: TMAP_TERRAIN_HYBRID_MAP,
+					},
+				]);
+				map.addControl(ctrl);
+			}
+		</script>
+	</head>
+
+	<body onLoad="onLoad()">
+		<div id="mapDiv"></div>
+	</body>
+</html>

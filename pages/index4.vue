@@ -1,7 +1,6 @@
 <template>
-	<view>
-		<!-- 本地webview -->
-		<web-view src="/static/html/tianditu.html"></web-view>
+	<view class="container">
+		<text>你好</text>
 	</view>
 </template>
 
