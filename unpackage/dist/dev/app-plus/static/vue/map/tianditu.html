@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../../components/TranscendLib/TranscendLib.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	
+
 	<style>
 		#mapDiv {
 			width: 100%;
@@ -33,13 +33,15 @@
 <!-- test -->
 <script src="../../components/my-component/my-component.js"></script>
 <!-- 使用TranscendComponent打包时，只能用于html -->
-<script src="../../components/TranscendLib/TranscendLib.umd.js"></script>
+<script src="../../components/TranscendLib/TranscendLib.umd.min.js"></script>
 <script>
+	var map;
+	var ctrl_military;
+	var ctrl_maptype;
 	new Vue({
 		el: '#app',
 		data: function() {
-			return {
-			};
+			return {};
 		},
 		mounted: function() {
 			that = this;
@@ -53,6 +55,56 @@
 			buttonClick() {
 				this.$toast('提示文案');
 			},
+			// 点击FAB第1个BUTTON
+			handleFabClick1() {
+				this.ctrlMapTypeHandler()
+			},
+			// 点击FAB第2个BUTTON
+			handleFabClick2() {
+				this.positioning()
+				// this.$toast('功能开发中，敬请期待！');
+				// this.ctrlMilitaryHandler()
+			},
+			ctrlMilitaryHandler() {
+				if (ctrl_military === undefined) {
+					ctrl_military = new T.Control.militarySymbols({
+						position: T_ANCHOR_TOP_LEFT
+					});
+					map.addControl(ctrl_military);
+				} else {
+					map.removeControl(ctrl_military);
+					ctrl_military = null;
+				}
+			},
+			ctrlMapTypeHandler() {
+				if (ctrl_maptype === undefined) {
+					//创建对象
+					ctrl_maptype = new T.Control.MapType();
+					//添加控件
+					map.addControl(ctrl_maptype);
+					ctrl_maptype.setPosition(T_ANCHOR_TOP_LEFT);
+				} else {
+					map.removeControl(ctrl_maptype);
+					ctrl_maptype = null;
+				}
+			},
+			positioning() {
+				var lo = new T.Geolocation();
+				fn = function(e) {
+					if (this.getStatus() == 0) {
+						map.centerAndZoom(e.lnglat, 18)
+						var marker = new T.Marker(e.lnglat);
+						map.addOverLay(marker);
+
+					}
+					if (this.getStatus() == 1) {
+						map.centerAndZoom(e.lnglat, e.level)
+						var marker = new T.Marker(e.lnglat);
+						map.addOverLay(marker);
+					}
+				}
+				lo.getCurrentPosition(fn);
+			}
 		}
 	});
 	Vue.use(vant.Lazyload);

@@ -4382,13 +4382,13 @@ button2.install = function(Vue){
 }
 /* harmony default export */ var components_button2 = (button2);
 
-// CONCATENATED MODULE: C:/work/project/fasp3gp/gpweb/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0cfcb0cb-vue-loader-template"}!C:/work/project/fasp3gp/gpweb/node_modules/vue-loader/lib/loaders/templateLoader.js??ref--5!C:/work/project/fasp3gp/gpweb/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/work/project/fasp3gp/gpweb/node_modules/vue-loader/lib??vue-loader-options!./src/components/transcendfab/transcendfab.vue?vue&type=template&id=3f6257d1&scoped=true&
-var transcendfabvue_type_template_id_3f6257d1_scoped_true_render = function render(){var _vm=this,_c=_vm._self._c;return _c('fab',{attrs:{"position":_vm.position,"icon-size":_vm.iconSizes,"position-type":_vm.positionType,"bg-color":_vm.colors.hex,"main-icon":_vm.mainIcon,"main-tooltip":_vm.mainTooltip,"actions":[{name: 'alertMe1',icon: _vm.firstIcon, tooltip: _vm.firstTooltip, color:'#d11014'},{name: 'alertMe2',icon: _vm.secondIcon, tooltip: _vm.secondTooltip}],"fixed-tooltip":_vm.fixedTooltip,"enable-rotation":_vm.enableRotation},on:{"alertMe1":_vm.alert1,"alertMe2":_vm.alert2}})
+// CONCATENATED MODULE: C:/work/project/fasp3gp/gpweb/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0cfcb0cb-vue-loader-template"}!C:/work/project/fasp3gp/gpweb/node_modules/vue-loader/lib/loaders/templateLoader.js??ref--5!C:/work/project/fasp3gp/gpweb/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/work/project/fasp3gp/gpweb/node_modules/vue-loader/lib??vue-loader-options!./src/components/transcendfab/transcendfab.vue?vue&type=template&id=08f71940&scoped=true&
+var transcendfabvue_type_template_id_08f71940_scoped_true_render = function render(){var _vm=this,_c=_vm._self._c;return _c('fab',{attrs:{"position":_vm.position,"icon-size":_vm.iconSizes,"position-type":_vm.positionType,"bg-color":_vm.colors.hex,"main-icon":_vm.mainIcon,"main-tooltip":_vm.mainTooltip,"actions":[{name: 'alertMe1',icon: _vm.firstIcon, tooltip: _vm.firstTooltip, color:'#d11014'},{name: 'alertMe2',icon: _vm.secondIcon, tooltip: _vm.secondTooltip}],"fixed-tooltip":_vm.fixedTooltip,"enable-rotation":_vm.enableRotation},on:{"alertMe1":_vm.alert1,"alertMe2":_vm.alert2}})
 }
-var transcendfabvue_type_template_id_3f6257d1_scoped_true_staticRenderFns = []
+var transcendfabvue_type_template_id_08f71940_scoped_true_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/transcendfab/transcendfab.vue?vue&type=template&id=3f6257d1&scoped=true&
+// CONCATENATED MODULE: ./src/components/transcendfab/transcendfab.vue?vue&type=template&id=08f71940&scoped=true&
 
 // CONCATENATED MODULE: C:/work/project/fasp3gp/gpweb/node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0cfcb0cb-vue-loader-template"}!C:/work/project/fasp3gp/gpweb/node_modules/vue-loader/lib/loaders/templateLoader.js??ref--5!C:/work/project/fasp3gp/gpweb/node_modules/cache-loader/dist/cjs.js??ref--0-0!C:/work/project/fasp3gp/gpweb/node_modules/vue-loader/lib??vue-loader-options!./src/components/fab/fab.vue?vue&type=template&id=4d6bbacb&scoped=true&
 var fabvue_type_template_id_4d6bbacb_scoped_true_render = function render(){var _vm=this,_c=_vm._self._c;return _c('div',{directives:[{name:"on-clickaway",rawName:"v-on-clickaway",value:(_vm.away),expression:"away"}],staticClass:"fab-wrapper",style:([ _vm.pos, {zIndex: _vm.zIndex}, {position: _vm.positionType} ]),attrs:{"id":_vm.position + '-wrapper'}},[_c('div',{staticClass:"actions-container",style:(_vm.listPos),attrs:{"id":_vm.position + '-action'}},[_c('transition',{attrs:{"name":"fab-actions-appear","enter-active-class":_vm.transitionEnter,"leave-active-class":_vm.transitionLeave}},[_c('ul',{directives:[{name:"show",rawName:"v-show",value:(_vm.toggle),expression:"toggle"}],staticClass:"fab-list"},[_vm._l((_vm.actions),function(action){return [_c('transition',{attrs:{"enter-active-class":"animated quick zoomIn","leave-active-class":"animated quick zoomOut"},on:{"after-enter":_vm.afterActionsTransitionEnter}},[(action.tooltip)?[(_vm.toggle)?_c('li',{directives:[{name:"tooltip",rawName:"v-tooltip",value:({ content: action.tooltip, placement: _vm.tooltipPosition, classes: 'fab-tooltip', trigger: _vm.tooltipTrigger}),expression:"{ content: action.tooltip, placement: tooltipPosition, classes: 'fab-tooltip', trigger: tooltipTrigger}"}],ref:"actions",refInFor:true,staticClass:"pointer",style:({ 'background-color': action.color || _vm.bgColor }),on:{"click":function($event){return _vm.toParent(action.name)}}},[_c('i',{class:[ _vm.actionIconSize ,'material-icons']},[_vm._v(_vm._s(action.icon))])]):_vm._e()]:[(_vm.toggle)?_c('li',{staticClass:"pointer",style:({ 'background-color': action.color || _vm.bgColor }),on:{"click":function($event){return _vm.toParent(action.name)}}},[_c('i',{class:[ _vm.actionIconSize ,'material-icons']},[_vm._v(_vm._s(action.icon))])]):_vm._e()]],2)]})],2)])],1),(_vm.rippleShow)?[(_vm.mainTooltip)?[_c('div',{directives:[{name:"ripple",rawName:"v-ripple",value:(_vm.rippleColor == 'light' ? 'rgba(255, 255, 255, 0.35)' : ''),expression:"rippleColor == 'light' ? 'rgba(255, 255, 255, 0.35)' : ''"},{name:"tooltip",rawName:"v-tooltip",value:({ content: _vm.mainTooltip, placement: _vm.tooltipPosition, classes: 'fab-tooltip' }),expression:"{ content: mainTooltip, placement: tooltipPosition, classes: 'fab-tooltip' }"}],staticClass:"fab-main pointer",style:({ 'background-color': _vm.bgColor, 'padding': _vm.paddingAmount }),on:{"click":function($event){_vm.toggle = !_vm.toggle}}},[_c('i',{class:[ _vm.mainIconSize , { rotate: _vm.toggle && _vm.allowRotation } ,'material-icons main']},[_vm._v(_vm._s(_vm.mainIcon))]),_c('i',{class:[ _vm.mainIconSize , { rotate: _vm.toggle && _vm.allowRotation } ,'material-icons close']},[_vm._v("add")])])]:[_c('div',{directives:[{name:"ripple",rawName:"v-ripple",value:(_vm.rippleColor == 'light' ? 'rgba(255, 255, 255, 0.35)' : ''),expression:"rippleColor == 'light' ? 'rgba(255, 255, 255, 0.35)' : ''"}],staticClass:"fab-main pointer",style:({ 'background-color': _vm.bgColor, 'padding': _vm.paddingAmount }),on:{"click":function($event){_vm.toggle = !_vm.toggle}}},[_c('i',{class:[ _vm.mainIconSize , { rotate: _vm.toggle && _vm.allowRotation }, 'material-icons main']},[_vm._v(_vm._s(_vm.mainIcon))]),_c('i',{class:[ _vm.mainIconSize , { rotate: _vm.toggle && _vm.allowRotation }, 'material-icons close']},[_vm._v("add")])])]]:[(_vm.mainTooltip)?[_c('div',{staticClass:"fab-main pointer",style:({ 'background-color': _vm.bgColor, 'padding': _vm.paddingAmount }),attrs:{"v-tooltip":{ content: _vm.mainTooltip, placement: _vm.tooltipPosition, classes: 'fab-tooltip'}}},[_c('i',{staticClass:"material-icons md-36 main",class:{ rotate: _vm.toggle && _vm.allowRotation }},[_vm._v(_vm._s(_vm.mainIcon))]),_c('i',{staticClass:"material-icons md-36 close",class:{ rotate: _vm.toggle && _vm.allowRotation }},[_vm._v("add")])])]:[_c('div',{staticClass:"fab-main pointer",style:({ 'background-color': _vm.bgColor, 'padding': _vm.paddingAmount })},[_c('i',{staticClass:"material-icons md-36 main",class:{ rotate: _vm.toggle && _vm.allowRotation }},[_vm._v(_vm._s(_vm.mainIcon))]),_c('i',{staticClass:"material-icons md-36 close",class:{ rotate: _vm.toggle && _vm.allowRotation }},[_vm._v("add")])])]]],2)
@@ -4894,21 +4894,23 @@ var fab_component = normalizeComponent(
         iconSizes: 'medium',
         colors: defaultProps,
         mainIcon: 'add',
-        mainTooltip: 'Hello',
-        firstIcon: 'cached',
-        firstTooltip: '第一个',
-        secondIcon: 'add_alert',
-        secondTooltip: '第二个',
+        mainTooltip: '',
+        firstIcon: 'category',
+        firstTooltip: '图层',
+        secondIcon: 'place',
+        secondTooltip: '定位',
         enableRotation: true
       }
     },
     methods: {
-        alert1(){
-            alert('You have clicked me :111111)');
-        },
-    	alert2(){
-    	    alert('You have clicked me :222222)');
-    	},
+      alert1() {
+        this.$parent.handleFabClick1()
+        this.$emit('handleFabClick1')
+      },
+      alert2() {
+        this.$parent.handleFabClick2()
+        this.$emit('handleFabClick2')
+      },
     }
   });
 
@@ -4924,11 +4926,11 @@ var fab_component = normalizeComponent(
 
 var transcendfab_component = normalizeComponent(
   transcendfab_transcendfabvue_type_script_lang_js_,
-  transcendfabvue_type_template_id_3f6257d1_scoped_true_render,
-  transcendfabvue_type_template_id_3f6257d1_scoped_true_staticRenderFns,
+  transcendfabvue_type_template_id_08f71940_scoped_true_render,
+  transcendfabvue_type_template_id_08f71940_scoped_true_staticRenderFns,
   false,
   null,
-  "3f6257d1",
+  "08f71940",
   null
   
 )

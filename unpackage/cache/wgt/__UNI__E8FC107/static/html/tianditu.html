@@ -7,19 +7,27 @@
 		<style>
 			#mapDiv {
 				width: 100%;
-				height: calc(100vh - 50px);
+				height: calc(100vh - 20px);
 			}
 		</style>
-		<script type="text/javascript" src="http://api.tianditu.gov.cn/api?v=4.0&tk=您的密钥">
+		<script type="text/javascript" src="http://api.tianditu.gov.cn/api?v=4.0&tk=81bf1620a6d719f1ed9bfd37c45fa64b">
 		</script>
 		<script>
+			window.msgFromUniapp = function(arg) {
+				var aaa = JSON.stringify(arg);
+			   console.log(aaa);
+			   alert(aaa);
+			}
+
 			var map;
 			var zoom = 16;
 
 			function onLoad() {
 				map = new T.Map('mapDiv');
 				map.centerAndZoom(new T.LngLat(117.118, 36.65659), zoom);
-				addmapTypeControl();
+
+					// addmapTypeControl();
+
 			}
 
 			function addmapTypeControl() {
